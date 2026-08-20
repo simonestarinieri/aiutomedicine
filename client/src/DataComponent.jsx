@@ -1,16 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-
+import Barcode from './Barcode';
 const baseUrl = new URL(document.location.origin);
 baseUrl.port = 8080;
 
-function Barcode({exists,code}){
-  console.log(exists,code);
-  if(exists){
-    return(<img src={"data:image/png;base64,"+code} alt="barcode"/>);
-  }
-  return null;
-}
 export default function DataComponent() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
