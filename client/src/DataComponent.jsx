@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
+const baseUrl = new URL(document.location.origin);
+baseUrl.port = 8080;
+
 function Barcode({exists,code}){
   console.log(exists,code);
   if(exists){
@@ -13,7 +16,7 @@ export default function DataComponent() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get('http://127.0.0.1:8080/api/medicine').then((data) => {
+    axios.get(baseUrl.origin+'/api/medicine').then((data) => {
     //this console.log will be in our frontend console
     let medicines = data.data.map(med =>
       <li key={med.id}>
