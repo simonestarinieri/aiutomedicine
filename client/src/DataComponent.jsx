@@ -13,7 +13,7 @@ export default function DataComponent() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get('http://localhost:8080/api/medicine').then((data) => {
+    axios.get('http://127.0.0.1:8080/api/medicine').then((data) => {
     //this console.log will be in our frontend console
     let medicines = data.data.map(med =>
       <li key={med.id}>
