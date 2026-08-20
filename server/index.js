@@ -1,4 +1,4 @@
-#!/usr/bin/env node --env-file=.env
+#!/usr/bin/env node
 const express = require('express');
 const app = express();
 const util = require('util');
