@@ -12,15 +12,17 @@ export default function DataComponent() {
     axios.get(baseUrl.origin+'/api/medicine').then((data) => {
     //this console.log will be in our frontend console
     let medicines = data.data.map(med =>
-      <li key={med.id}>
-        <p>{med.nome}</p>
-        <p>{med.quantità}</p>
+      <li className='item' key={med.id}>
+        <p className='medName'>{med.nome}</p>
         <Barcode exists={med.codice ? true : false} code={med.codice} />
-        <form action="modificaMedicine" method="get">
-          <input type='hidden' name="id" value={med.id}/>
-          <button type="submit" name="action" value="elimina">x</button>
-          <button type='submit' name='action' value='modifica'>edit</button>
-        </form>
+        <div className='rightSide'>
+          <p className='medAmount'>{med.quantità}</p>
+          <form className='buttons' action="modificaMedicine" method="get">
+            <input type='hidden' name="id" value={med.id}/>
+            <button className='delButton' type="submit" name="action" value="elimina">x</button>
+            <button className='editButton' type='submit' name='action' value='modifica'>edit</button>
+          </form>
+        </div>
       </li>
     );
     setData(medicines);
@@ -32,9 +34,9 @@ export default function DataComponent() {
       });
   }, []); // Empty array ensures this runs only on mount
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) return <div className='loader'>Loading...</div>;
   return (
-  <ul>
+  <ul className='list'>
     {data}
   </ul>
   );

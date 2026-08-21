@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src="logo512.png" alt="logo"></img>       
+        <img className="App-logo" src="logo512.png" alt="logo"></img>       
       </header>
       <DataComponent />
     </div>

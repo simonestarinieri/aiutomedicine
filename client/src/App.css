@@ -13,9 +13,47 @@
   }
 }
 
+.list{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.medName{
+  align-self: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  flex:2;
+}
+
+.item{
+  box-shadow:5px 5px 5px #888888;
+  border:1px solid black;
+  border-radius: 20px;
+  margin:20px;
+  padding:20px;
+  display:flex;
+  justify-content: space-evenly;
+}
+.barcode{
+  height:30px;
+  padding-right:30px;
+  align-self: center;
+}
+.buttons{
+  align-self: center;
+  margin-right:0;
+}
+
+.App-logo{
+  height:64px;
+}
+
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  position: sticky;
+  top:0;
+  width: 100vw;
+  background-color: green;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;

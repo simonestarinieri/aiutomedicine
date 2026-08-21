@@ -1,10 +1,10 @@
 import bwipjs from '@bwip-js/browser';  // Platform-specific package import
 
 export default function Barcode({exists,code}) {
-    console.log(exists,code);
     if(exists){
         return (
-            <canvas
+            <canvas className='barcode'
+            id={code}
                 ref={(canvas) => {
                     if (!canvas) {
                     return;
