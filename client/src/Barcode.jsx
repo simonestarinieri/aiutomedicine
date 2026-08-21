@@ -1,10 +1,15 @@
 import bwipjs from '@bwip-js/browser';  // Platform-specific package import
 
 export default function Barcode({exists,code}) {
+    const handleFullscreen = (id)=>{
+        let element=document.getElementById(id);
+        element.requestFullscreen()
+    }
     if(exists){
         return (
             <canvas className='barcode'
             id={code}
+            onClick={() => handleFullscreen(code)}
                 ref={(canvas) => {
                     if (!canvas) {
                     return;

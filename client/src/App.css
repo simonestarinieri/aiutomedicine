@@ -35,6 +35,7 @@
   justify-content: space-evenly;
 }
 .barcode{
+  background-color: white;
   height:30px;
   padding-right:30px;
   align-self: center;
