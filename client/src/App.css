@@ -2,11 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -20,7 +15,7 @@
 }
 .medName{
   align-self: center;
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-weight: 600;
   flex:2;
 }
@@ -37,24 +32,90 @@
 .barcode{
   background-color: white;
   height:30px;
-  padding-right:30px;
+  padding:0px 30px;
   align-self: center;
+}
+.rightSide{
+  flex:1;
+  margin-left:auto;
+}
+.medAmount{
+  font-size: large;
+  font-weight: 500;
 }
 .buttons{
   align-self: center;
-  margin-right:0;
 }
-
+.editButton{
+  color:white;
+  background-color: green;
+  border:none;
+  border-radius:20%;
+  padding:10px;
+}
+.popup-content{
+  display:flex;
+  flex-direction: column;
+  width:80%;
+  min-height: 50%;
+  border:2px solid black;
+  border-radius: 10px;
+  background-color: white;
+}
+.modal{
+  flex:2;
+  height: 100%;
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.amountText{
+  border-radius: 10%;
+  border:1px solid gray;
+  width: 20%;
+  padding: 10%;
+  align-self: center;
+  text-align: center;
+}
+.submitButton{
+  border:1px solid gray;
+  color:white;
+  background-color: green;
+  padding:20px;
+  border-radius: 10px;
+  width: fit-content;
+  align-self: center;
+}
+.amountText[type="text"]{
+    font-size: 20px;
+}
+.modal>.buttons{
+  flex:2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.modal>.medName{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex:3;
+}
+button>path{
+  height:24px;
+}
 .App-logo{
+  position:sticky;
   height:64px;
 }
 
 .App-header {
   position: sticky;
   top:0;
+  height: 10vh;
   width: 100vw;
   background-color: green;
-  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -63,15 +124,12 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(-360deg);
   }
 }

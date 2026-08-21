@@ -18,7 +18,7 @@ export default function Barcode({exists,code}) {
                     bwipjs.toCanvas(canvas, {
                     bcid:        'code32',               // Barcode type
                     text:        code,            // Text to encode
-                    scale:       window.devicePixelRatio, // Scaling factor for high-DPI devices
+                    scale:       50, // Scaling factor for high-DPI devices
                     height:      10,                      // Bar height, in millimeters
                     includetext: true,                    // Show human-readable text
                     textxalign:  'center',                // Always good to set this
