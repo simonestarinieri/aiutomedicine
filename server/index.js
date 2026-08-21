@@ -12,6 +12,7 @@ app.use(cors());
 
 app.get('/api/medicine', async (req,res)=>{
         let [data] = await db.query(select);
+        console.log(data);
         res.json(data);
     }
 )
