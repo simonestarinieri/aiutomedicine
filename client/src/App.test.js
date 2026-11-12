@@ -1,8 +1,16 @@
 import { render, screen } from '@testing-library/react';
+import axios from 'axios';
 import App from './App';
 
-test('renders learn react link', () => {
+jest.mock('axios');
+jest.mock('./Barcode', () => () => null);
+
+test('renders the app title and patient tabs', async () => {
+  axios.get.mockResolvedValue({ data: [] });
+
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+
+  expect(screen.getByRole('heading', { name: 'Aiuto Medicine' })).toBeInTheDocument();
+  expect(await screen.findByRole('tab', { name: /Alberto/i })).toBeInTheDocument();
+  expect(screen.getByRole('tab', { name: /Dina/i })).toBeInTheDocument();
 });

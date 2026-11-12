@@ -50,18 +50,18 @@ INSERT INTO `medicine` (`id`, `nome`, `quantità`, `istruzione`, `codice`, `nome
 (5, 'avodart', 153, '{\"name\":\"avodart\",\"schedule\":\"0 20 * * *\",\"task\":\"1\"}', '035895010', 'dopo cena', 1, 0),
 (6, 'urorec', 60, '{\"name\":\"urorec\",\"schedule\":\"0 20 * * *\",\"task\":\"1\"}', '039789110', 'dopo cena', 1, 0),
 (7, 'torvast', 56, '{\"name\":\"torvast\",\"schedule\":\"0 21 * * *\",\"task\":\"1\"}', '033007067', 'delle 21', 1, 0),
-(8, 'bisoprololo', 29, '{\"name\":\"bisoprololo\",\"schedule\":\"0 8,20 * * *\",\"task\":\"1\"}', NULL, 'delle 8 e delle 20', 1, 0),
-(9, 'novorapid', 300, '{\"name\":\"novorapid\",\"schedule\":\"0 21 * * *\",\"task\":\"20\"}', NULL, NULL, 1, 0),
-(10, 'ozempic', 6, '{\"name\":\"ozempic\",\"schedule\":\"0 8 * * 1\",\"task\":\"1\"}', NULL, NULL, 1, 0),
-(11, 'tresiba', 300, '{\"name\":\"tresiba\",\"schedule\":\"0 21 * * *\",\"task\":\"24\"}', NULL, NULL, 1, 0),
-(12, 'reumaflex', 12, '{\"name\":\"reumaflex\",\"schedule\":\"0 8 * * 1\",\"task\":\"1\"}', NULL, NULL, 0, 1),
-(13, 'folina', 50, '{\"name\":\"folina\",\"schedule\":\"0 8,20 * * *\",\"task\":\"1\"}', NULL, NULL, 0, 1),
-(14, 'tredimin', 3, '{\"name\":\"tredimin\",\"schedule\":\"0 8 * * 1\",\"task\":\"1\"}', NULL, NULL, 0, 1),
-(15, 'sideral', 11, '{\"name\":\"sideral\",\"schedule\":\"0 8 * * *\",\"task\":\"1\"}', NULL, NULL, 0, 1),
-(16, 'omeprazolo', 25, '{\"name\":\"omeprazolo\",\"schedule\":\"0 8 * * *\",\"task\":\"1\"}', NULL, NULL, 0, 1),
-(17, 'quinazide', 53, '{\"name\":\"quinazide\",\"schedule\":\"0 8 * * *\",\"task\":\"1\"}', NULL, 'della mattina', 0, 1),
-(18, 'norvasc', 94, '{\"name\":\"norvasc\",\"schedule\":\"0 8 * * *\",\"task\":\"1\"}', NULL, NULL, 0, 1),
-(19, 'zyloric', 51, '{\"name\":\"zyloric\",\"schedule\":\"0 8 */2 * *\",\"task\":\"1\"}', NULL, NULL, 0, 1);
+(8, 'bisoprololo', 29, '{\"name\":\"bisoprololo\",\"schedule\":\"0 8,20 * * *\",\"task\":\"1\"}', '040444186', 'delle 8 e delle 20', 1, 0),
+(9, 'novorapid', 300, '{\"name\":\"novorapid\",\"schedule\":\"0 21 * * *\",\"task\":\"20\"}', '034498093', NULL, 1, 0),
+(10, 'ozempic', 6, '{\"name\":\"ozempic\",\"schedule\":\"0 8 * * 1\",\"task\":\"1\"}', '046128017', NULL, 1, 0),
+(11, 'tresiba', 300, '{\"name\":\"tresiba\",\"schedule\":\"0 21 * * *\",\"task\":\"24\"}', '042658029', NULL, 1, 0),
+(12, 'reumaflex', 12, '{\"name\":\"reumaflex\",\"schedule\":\"0 8 * * 1\",\"task\":\"1\"}', '039153085', NULL, 0, 1),
+(13, 'folina', 50, '{\"name\":\"folina\",\"schedule\":\"0 8,20 * * *\",\"task\":\"1\"}', '002309045', NULL, 0, 1),
+(14, 'tredimin', 3, '{\"name\":\"tredimin\",\"schedule\":\"0 8 * * 1\",\"task\":\"1\"}', '042753020', NULL, 0, 1),
+(15, 'sideral', 11, '{\"name\":\"sideral\",\"schedule\":\"0 8 * * *\",\"task\":\"1\"}', '904104193', NULL, 0, 1),
+(16, 'omeprazolo', 25, '{\"name\":\"omeprazolo\",\"schedule\":\"0 8 * * *\",\"task\":\"1\"}', '038082309', NULL, 0, 1),
+(17, 'quinazide', 53, '{\"name\":\"quinazide\",\"schedule\":\"0 8 * * *\",\"task\":\"1\"}', '028331015', 'della mattina', 0, 1),
+(18, 'norvasc', 94, '{\"name\":\"norvasc\",\"schedule\":\"0 8 * * *\",\"task\":\"1\"}', '043348022', NULL, 0, 1),
+(19, 'zyloric', 51, '{\"name\":\"zyloric\",\"schedule\":\"0 8 */2 * *\",\"task\":\"1\"}', '021259027', NULL, 0, 1);
 
 --
 -- Indici per le tabelle scaricate
