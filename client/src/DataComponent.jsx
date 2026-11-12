@@ -72,11 +72,21 @@ export default function DataComponent() {
       .sort(compareMedicines);
   }, [medicines, activePatient, query]);
 
-  const handleSave = async (id, amount) => {
-    await axios.post(`${baseUrl}/api/edit`, { id, amount });
-    setMedicines((current) =>
-      current.map((item) => (item.id === id ? { ...item, quantità: amount } : item))
-    );
+  const handleSave = async (payload) => {
+    try {
+      if (payload._new) {
+        // Add new medicine
+        await axios.post(`${baseUrl}/api/medicine`, payload);
+      } else {
+        // Edit existing medicine (payload.id is set)
+        await axios.post(`${baseUrl}/api/edit`, payload);
+      }
+      // Refresh the list
+      await load();
+      setEditing(null);
+    } catch (err) {
+      console.error(err);
+    }
   };
 
   const handleTabKeyDown = (event, index) => {
@@ -108,6 +118,17 @@ export default function DataComponent() {
               <span className="tab__count">{counts[patient.id] ?? 0}</span>
             </button>
           ))}
+        </div>
+
+        <div className="add">
+          <button
+            type="button"
+            className="button button--primary"
+            onClick={() => setEditing({ _new: true })}
+            aria-label="Aggiungi farmaco"
+          >
+            Aggiungi
+          </button>
         </div>
 
         <div className="search">
